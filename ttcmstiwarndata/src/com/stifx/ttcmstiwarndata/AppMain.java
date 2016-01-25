@@ -8,16 +8,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
+
 
 public class AppMain {
 	
 	
 	public static void main(String args[]) {
 		
-		Logger logger = LoggerFactory.getLogger(AppMain.class);
+		Logger logger = Logger.getLogger(AppMain.class);
 		
 		String strTimeStamp = null;
 		
