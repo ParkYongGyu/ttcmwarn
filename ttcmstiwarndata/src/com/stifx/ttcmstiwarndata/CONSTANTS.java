@@ -10,8 +10,9 @@ public class CONSTANTS {
 	
     public static String driverName = "com.mysql.jdbc.Driver"; 
 
-    public static String dbURLRelica = "jdbc:mysql://replicatedttdb.cc6a9ppwlqft.ap-southeast-1.rds.amazonaws.com:3306"; 
-    public static String dbURLStiBrokers = "jdbc:mysql://stifxbrokers.cc6a9ppwlqft.ap-southeast-1.rds.amazonaws.com:3306"; 
-    	
+    //public static String dbURLRelica = "jdbc:mysql://replicatedttdb.cc6a9ppwlqft.ap-southeast-1.rds.amazonaws.com:3306"; 
+    //    //public static String dbURLStiBrokers = "jdbc:mysql://stifxbrokers.cc6a9ppwlqft.ap-southeast-1.rds.amazonaws.com:3306"; 
+    public static String dbURLRelica = "jdbc:mysql://52.76.242.71:3306"; 
+    public static String dbURLStiBrokers = "jdbc:mysql://52.76.239.177:3306"; 
 
 }
