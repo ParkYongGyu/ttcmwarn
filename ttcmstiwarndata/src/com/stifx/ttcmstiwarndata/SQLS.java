@@ -108,7 +108,7 @@ public class SQLS {
 			"	totalWarnCount = ( SELECT totalWarnCount FROM sti_warn.WarnListTmp WHERE mt4Login = A.mt4Login) , " + 
 			"   recentModifyTime = ( SELECT recentModifyTime FROM sti_warn.WarnListTmp WHERE mt4Login = A.mt4Login) " +
 			"WHERE STATUS = 'New' " +
-			"AND enterTime <=  DATE_ADD( ?,INTERVAL -" + CONSTANTS.NEW_CHECK_HOURS + "  ) " + 
+			//"AND enterTime <=  DATE_ADD( ?,INTERVAL -" + CONSTANTS.NEW_CHECK_HOURS + "  ) " + 
 			"AND EXISTS ( SELECT 1 FROM sti_warn.WarnListTmp WHERE mt4Login = A.mt4Login ) ";
 	
 	// 처리 완료 였던 건에 대한 처리 
