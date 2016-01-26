@@ -127,8 +127,7 @@ Password :
                 
 	            executePreparedStatement( connStibrokers, 
 	            		pstmtStiBroker, 
-	            		SQLS.updateLstSqlNew,
-	            		nowSqlDate );  
+	            		SQLS.updateLstSqlNew);  
                 
 	            executePreparedStatement( connStibrokers, 
 	            		pstmtStiBroker, 
