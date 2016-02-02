@@ -161,7 +161,8 @@ public class CopyTables {
             	
 	            rsReplica = null;
 	            pstmtReplica  = connRelica.prepareStatement(SQLSCOPYTABLE.sqlQueryReplicaMT4_TRADES);
-	            pstmtReplica.setTimestamp(1, timestampForTTCM_TRADES); // 
+	            pstmtReplica.setString(1, "2016-02-02 09:42:18");
+	            //pstmtReplica.setTimestamp(1, timestampForTTCM_TRADES); // 
 	            rsReplica = pstmtReplica.executeQuery();
 	            
 	            if (rsReplica != null) {
