@@ -59,9 +59,12 @@ public class CopyTables {
             	if(stmtReplica != null) 
             		stmtReplica.close();
 
-            	logger.info( DateUtil.getTimeStampString() + " TTCM_USERS 데이타 입력 시작   !!  " + timestampForTTCM_USERS);
+            	logger.info(  DateUtil.getTimeStampString() + "  TTCM_USERS 데이타 입력 시작   !!  이전에 "  + timestampForTTCM_USERS + " 까지 입력됨!");
             	
 	            rsReplica = null;
+	            
+            	logger.info(  SQLSCOPYTABLE.sqlQueryReplicaMT4_USERS );
+
 	            pstmtReplica  = connRelica.prepareStatement(SQLSCOPYTABLE.sqlQueryReplicaMT4_USERS);
 	            pstmtReplica.setTimestamp(1, timestampForTTCM_USERS);
 	            rsReplica = pstmtReplica.executeQuery();
@@ -156,7 +159,7 @@ public class CopyTables {
             	if(stmtReplica != null) 
             		stmtReplica.close();
 
-            	logger.info( DateUtil.getTimeStampString() + " TTCM_TRADES 데이타 입력 시작   !!  " + timestampForTTCM_TRADES);
+            	logger.info( DateUtil.getTimeStampString() + " TTCM_TRADES 데이타 입력 시작    !!  이전에 "  + timestampForTTCM_TRADES + " 까지 입력됨!");
             	
 	            rsReplica = null;
 	            pstmtReplica  = connRelica.prepareStatement(SQLSCOPYTABLE.sqlQueryReplicaMT4_TRADES);
