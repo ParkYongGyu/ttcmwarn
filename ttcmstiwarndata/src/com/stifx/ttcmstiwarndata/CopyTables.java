@@ -44,7 +44,7 @@ public class CopyTables {
 
             while(true) {
             	
-	            stmtReplica = connRelica.createStatement(); 
+	            stmtReplica = connStibrokers.createStatement(); 
 	            rsReplica = null;
 	            rsReplica = stmtReplica.executeQuery(SQLSCOPYTABLE.sqlQueryMaxTimeForTTCM_USERS);
 	            
@@ -141,7 +141,7 @@ public class CopyTables {
 	            
 	            
 
-	            stmtReplica = connRelica.createStatement(); 
+	            stmtReplica = connStibrokers.createStatement(); 
 	            rsReplica = null;
 	            rsReplica = stmtReplica.executeQuery(SQLSCOPYTABLE.sqlQueryMaxTimeForTTCM_TRADES);
 	            
