@@ -47,7 +47,7 @@ public class SQLSCOPYTABLE {
 	
 	public static String sqlQueryReplicaMT4_USERS = "SELECT " +
 			"LOGIN, " +  //int(11) PK 
-			"'TTC-STM_07_USD' AS GROUP, " +  //char(16) 
+			"'TTC-STM_07_USD' AS GROUPNAME, " +  //char(16) 
 			"ENABLE, " +  //int(11)
 			"ENABLE_CHANGE_PASS, " +  //int(11)
 			"ENABLE_READONLY, " +  // int(11)
