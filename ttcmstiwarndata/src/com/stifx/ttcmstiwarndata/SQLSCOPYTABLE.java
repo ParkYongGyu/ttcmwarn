@@ -130,7 +130,7 @@ public class SQLSCOPYTABLE {
 	
 		public static String insertSqlForMT4_USERS = "REPLACE INTO sti_warn.TTCM_MT4_USERS ( " +
 			"LOGIN, " +  //int(11) PK 
-			"GROUP, " +  //char(16) 
+			"GROUPNAME, " + 
 			"ENABLE, " +  //int(11)
 			"ENABLE_CHANGE_PASS, " +  //int(11)
 			"ENABLE_READONLY, " +  // int(11)
