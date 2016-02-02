@@ -63,8 +63,6 @@ public class CopyTables {
             	
 	            rsReplica = null;
 	            
-            	logger.info(  SQLSCOPYTABLE.sqlQueryReplicaMT4_USERS );
-
 	            pstmtReplica  = connRelica.prepareStatement(SQLSCOPYTABLE.sqlQueryReplicaMT4_USERS);
 	            pstmtReplica.setTimestamp(1, timestampForTTCM_USERS);
 	            rsReplica = pstmtReplica.executeQuery();
@@ -163,8 +161,7 @@ public class CopyTables {
             	
 	            rsReplica = null;
 	            pstmtReplica  = connRelica.prepareStatement(SQLSCOPYTABLE.sqlQueryReplicaMT4_TRADES);
-	            pstmtReplica.setString(1, "1970-01-01 00:00:00"); // timestampForTTCM_TRADES
-	            //pstmtReplica.setTimestamp(1, "1970-01-01 00:00:00"); // timestampForTTCM_TRADES
+	            pstmtReplica.setTimestamp(1, timestampForTTCM_TRADES); // 
 	            rsReplica = pstmtReplica.executeQuery();
 	            
 	            if (rsReplica != null) {
