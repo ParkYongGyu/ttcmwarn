@@ -2,11 +2,11 @@ package com.stifx.ttcmstiwarndata;
 
 public class SQLSCOPYTABLE {
 
-	public static String sqlQueryMaxTimeForTTCM_TRADES = "SELECT MODIFY_TIME " +
+	public static String sqlQueryMaxTimeForTTCM_TRADES = "SELECT ( MODIFY_TIME - INTERVAL 1 SECOND ) AS MODIFY_TIME " +
 			"FROM sti_warn.maxtime  " +
 			"WHERE id = 1 "; 
 
-	public static String sqlQueryMaxTimeForTTCM_USERS = "SELECT MODIFY_TIME " +
+	public static String sqlQueryMaxTimeForTTCM_USERS = "SELECT ( MODIFY_TIME - INTERVAL 1 SECOND ) AS MODIFY_TIME " +
 			"FROM sti_warn.maxtime  " +
 			"WHERE id = 2 ";
 	
