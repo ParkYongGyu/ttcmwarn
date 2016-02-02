@@ -56,10 +56,10 @@ Password :
 
             Class.forName(CONSTANTS.driverName); 
             
-            connRelica = DriverManager.getConnection(CONSTANTS.dbURLRelica, "traderstrust", "pwdtraderstrust0113"); 
+            connRelica = DriverManager.getConnection(CONSTANTS.dbURLRelica, CONSTANTS.dbURLRelicaUser, CONSTANTS.dbURLRelicaPassword); 
             logger.info( DateUtil.getTimeStampString() + " connRelica 접속 완료  !!");
             
-            connStibrokers = DriverManager.getConnection(CONSTANTS.dbURLStiBrokers, "supertaimodbuser", "pwdreplication15!%"); 
+            connStibrokers = DriverManager.getConnection(CONSTANTS.dbURLStiBrokers, CONSTANTS.dbURLStiBrokersaUser, CONSTANTS.dbURLStiBrokersPassword); 
             logger.info( DateUtil.getTimeStampString() + " connStibrokers 접속 완료  !!");
 
             connStibrokers.setAutoCommit(false);
