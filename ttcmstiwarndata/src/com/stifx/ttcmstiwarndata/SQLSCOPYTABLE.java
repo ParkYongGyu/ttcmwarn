@@ -90,7 +90,7 @@ public class SQLSCOPYTABLE {
 			"WHERE MODIFY_TIME > ? " +
 			"ORDER BY MODIFY_TIME ASC";
 	
-	public static String insertSqlForMT4_TRADES = "INSERT INTO sti_warn.MT4_TRADES ( " +
+	public static String insertSqlForMT4_TRADES = "REPLACE INTO sti_warn.TTCM_MT4_TRADES ( " +
 			  "TICKET, " + // ` int(11) NOT NULL,
 			  "LOGIN, " + // ` int(11) NOT NULL,
 			  "SYMBOL, " + // ` char(16) NOT NULL,
@@ -128,7 +128,7 @@ public class SQLSCOPYTABLE {
 			  " ) ";
 	
 	
-		public static String insertSqlForMT4_USERS = "INSERT INTO sti_warn.MT4_USERS ( " +
+		public static String insertSqlForMT4_USERS = "REPLACE INTO sti_warn.TTCM_MT4_USERS ( " +
 			"LOGIN, " +  //int(11) PK 
 			"GROUP, " +  //char(16) 
 			"ENABLE, " +  //int(11)
