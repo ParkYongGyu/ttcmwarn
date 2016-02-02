@@ -10,6 +10,8 @@ public class SQLS {
 			", CAST( CAST( SUM(TRS.PROFIT) AS decimal(10,2) ) * " + CONSTANTS.RISK_EQUITY_RATE + " AS decimal(10,2) ) AS WARNING_EQUITY " +
 			", CAST( SUM(TRS.PROFIT) AS decimal(10,2) ) AS PURE_DEPOSIT " +
 			", USERS.MODIFY_TIME " +
+            ", CAST( SUM(CASE WHEN TRS.PROFIT >= 0 AND CMD = 6 THEN TRS.PROFIT ELSE 0 END) AS decimal(10,2) ) AS ACTUAL_DEPOSIT " +
+            ", CAST( SUM(CASE WHEN TRS.PROFIT < 0  AND CMD = 6 THEN TRS.PROFIT ELSE 0 END) AS decimal(10,2) ) AS ACTUAL_WITHDRAWL  " +
 			"FROM report_live.MT4_USERS USERS  " +
 			"INNER JOIN report_live.MT4_TRADES TRS  " +
 			"ON USERS.LOGIN = TRS.LOGIN  " +
@@ -18,9 +20,8 @@ public class SQLS {
 			", USERS.NAME " + 
 			", USERS.EQUITY " +
 			", USERS.MODIFY_TIME " +
-			"HAVING SUM(TRS.PROFIT) > 0  " +
-			"AND USERS.EQUITY <= WARNING_EQUITY " +
-			"AND PURE_DEPOSIT > 0";
+			"HAVING LOSS_EQUITY > 0 AND USERS.EQUITY <= WARNING_EQUITY " +
+			"AND ACTUAL_DEPOSIT > 0";
 	
 	
 	public static String deleteTmpSql = "DELETE FROM sti_warn.WarnListTmp WHERE broker_id = " + CONSTANTS.BROKER_ID;
