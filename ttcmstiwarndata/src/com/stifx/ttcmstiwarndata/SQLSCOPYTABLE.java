@@ -168,13 +168,13 @@ public class SQLSCOPYTABLE {
 			"MARGIN_FREE, " +  // double
 			"CURRENCY, " +  // char(16)
 			"MODIFY_TIME " +  //datetime
-			") VALUES ( " + // ` datetime NOT NULL,
+			") VALUES ( " + 
 			" ?,?,?,?,?,?,?,?,?,?, " +  
 			" ?,?,?,?,?,?,?,?,?,?, " + 
 			" ?,?,?,?,?,?,?,?,?,? " + 
 			" ?,?,?,?,?,?,?,?,? " + 
 			" ) ";	
-	
+		 
 
 		public static String sqlUpdateMaxTimeForTTCM_TRADES = "UPDATE sti_warn.maxtime SET MODIFY_TIME = ? WHERE id = 2 ";
 

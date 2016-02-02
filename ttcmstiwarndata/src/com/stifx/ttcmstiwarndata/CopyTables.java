@@ -114,6 +114,50 @@ public class CopyTables {
 	                    timestampModifiedForTTCM_USERS = rsReplica.getTimestamp(40);
 	                    pstmtStiBroker.setTimestamp(39, timestampModifiedForTTCM_USERS);
 	                    
+	                    
+
+	            		logger.info( SQLSCOPYTABLE.insertSqlForMT4_USERS );
+	            		logger.info( "LOGIN : " + rsReplica.getInt(1));
+	            		logger.info( "GROUPNAME : " + rsReplica.getString(2));
+	            		logger.info( "ENABLE : " + rsReplica.getInt(3));
+	            		logger.info( "ENABLE_CHANGE_PASS : " + rsReplica.getInt(4));
+	            		logger.info( "ENABLE_READONLY : " + rsReplica.getInt(5));
+	            		logger.info( "ENABLE_OTP : " + rsReplica.getInt(6));
+	            		logger.info( "PASSWORD_PHONE : " + rsReplica.getString(7));
+	            		logger.info( "NAME : " + rsReplica.getString(8));
+	            		logger.info( "COUNTRY : " + rsReplica.getString(9));
+	            		logger.info( "CITY : " + rsReplica.getString(10));
+	            		logger.info( "STATE : " + rsReplica.getString(11));
+	            		logger.info( "ZIPCODE : " + rsReplica.getString(12));
+	            		logger.info( "ADDRESS : " + rsReplica.getString(13));
+	            		logger.info( "LEAD_SOURCE : " + rsReplica.getString(14));
+	            		logger.info( "PHONE : " + rsReplica.getString(15));
+	            		logger.info( "EMAIL : " + rsReplica.getString(16));
+	            		logger.info( "COMMENT : " + rsReplica.getString(17));
+	            		logger.info( "ID : " + rsReplica.getString(18));
+	            		logger.info( "STATUS : " + rsReplica.getString(19));
+	            		logger.info( "REGDATE : " + rsReplica.getTimestamp(20));
+	            		logger.info( "LASTDATE : " + rsReplica.getTimestamp(21));
+	            		logger.info( "LEVERAGE : " + rsReplica.getInt(22));
+	            		logger.info( "AGENT_ACCOUNT : " + rsReplica.getInt(23));
+	            		logger.info( "TIMESTAMP : " + rsReplica.getInt(24));
+	            		logger.info( "BALANCE : " + rsReplica.getDouble(25));
+	            		logger.info( "PREVMONTHBALANCE : " + rsReplica.getDouble(26));
+	            		logger.info( "PREVBALANCE : " + rsReplica.getDouble(27));
+	            		logger.info( "CREDIT : " + rsReplica.getDouble(28));
+	            		logger.info( "INTERESTRATE: " + rsReplica.getDouble(29));
+	            		logger.info( "TAXES : " + rsReplica.getDouble(30));
+	                    logger.info( "SEND_REPORTS : " + rsReplica.getInt(31));
+	                    logger.info( "MQID : " + rsReplica.getInt(32));
+	                    logger.info( "USER_COLOR : " + rsReplica.getInt(33));
+	                    logger.info( "EQUITY : " + rsReplica.getDouble(34));
+	                    logger.info( "MARGIN : " + rsReplica.getDouble(35));
+	                    logger.info( "MARGIN_LEVEL : " + rsReplica.getDouble(36));
+	                    logger.info( "MARGIN_FREE : " + rsReplica.getDouble(37));	 
+	                    logger.info( "CURRENCY : " + rsReplica.getString(38));       
+	                    logger.info( "MODIFY_TIME : " + timestampModifiedForTTCM_USERS);
+	                    
+	                    
 	                    pstmtStiBroker.executeUpdate();
 	                    if ( pstmtStiBroker != null ) 
 	                    	pstmtStiBroker.close();
