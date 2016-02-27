@@ -61,7 +61,7 @@ public class SQLSCOPYTABLE {
 			"ADDRESS, " +  // char(128)
 			"LEAD_SOURCE, " +  // char(32)
 			"PHONE, " +  // char(32)
-			"EMAIL, " +  // char(48)
+			//"EMAIL, " +  // char(48)
 			"COMMENT, " +  // char(64)
 			"ID, " +  // char(32)
 			"STATUS, " +  // char(16)
@@ -127,7 +127,6 @@ public class SQLSCOPYTABLE {
 			  " ?,?,?,?,?,?,?,?,?,? " + 
 			  " ) ";
 	
-	
 		public static String insertSqlForMT4_USERS = "REPLACE INTO sti_warn.TTCM_MT4_USERS ( " +
 			"LOGIN, " +  //int(11) PK 
 			"GROUPNAME, " + 
@@ -144,7 +143,7 @@ public class SQLSCOPYTABLE {
 			"ADDRESS, " +  // char(128)
 			"LEAD_SOURCE, " +  // char(32)
 			"PHONE, " +  // char(32)
-			"EMAIL, " +  // char(48)
+			//"EMAIL, " +  // char(48)
 			"COMMENT, " +  // char(64)
 			"ID, " +  // char(32)
 			"STATUS, " +  // char(16)
@@ -172,7 +171,7 @@ public class SQLSCOPYTABLE {
 			" ?,?,?,?,?,?,?,?,?,?, " +  
 			" ?,?,?,?,?,?,?,?,?,?, " + 
 			" ?,?,?,?,?,?,?,?,?,?, " + 
-			" ?,?,?,?,?,?,?,?,? " + 
+			" ?,?,?,?,?,?,?,? " + 
 			" ) ";	
 		 
 

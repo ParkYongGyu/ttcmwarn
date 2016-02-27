@@ -90,28 +90,27 @@ public class CopyTables {
 	                    pstmtStiBroker.setString(16, rsReplica.getString(16));
 	                    pstmtStiBroker.setString(17, rsReplica.getString(17));
 	                    pstmtStiBroker.setString(18, rsReplica.getString(18));
-	                    pstmtStiBroker.setString(19, rsReplica.getString(19));
+	                    pstmtStiBroker.setTimestamp(19, rsReplica.getTimestamp(19));
 	                    pstmtStiBroker.setTimestamp(20, rsReplica.getTimestamp(20));
-	                    pstmtStiBroker.setTimestamp(21, rsReplica.getTimestamp(21));
+	                    pstmtStiBroker.setInt(21, rsReplica.getInt(21));
 	                    pstmtStiBroker.setInt(22, rsReplica.getInt(22));
 	                    pstmtStiBroker.setInt(23, rsReplica.getInt(23));
-	                    pstmtStiBroker.setInt(24, rsReplica.getInt(24));
+	                    pstmtStiBroker.setDouble(24, rsReplica.getDouble(24));
 	                    pstmtStiBroker.setDouble(25, rsReplica.getDouble(25));
 	                    pstmtStiBroker.setDouble(26, rsReplica.getDouble(26));
 	                    pstmtStiBroker.setDouble(27, rsReplica.getDouble(27));
 	                    pstmtStiBroker.setDouble(28, rsReplica.getDouble(28));
 	                    pstmtStiBroker.setDouble(29, rsReplica.getDouble(29));
-	                    pstmtStiBroker.setDouble(30, rsReplica.getDouble(30));
+	                    pstmtStiBroker.setInt(30, rsReplica.getInt(30));
 	                    pstmtStiBroker.setInt(31, rsReplica.getInt(31));
 	                    pstmtStiBroker.setInt(32, rsReplica.getInt(32));
-	                    pstmtStiBroker.setInt(33, rsReplica.getInt(33));
+	                    pstmtStiBroker.setDouble(33, rsReplica.getDouble(33));
 	                    pstmtStiBroker.setDouble(34, rsReplica.getDouble(34));
 	                    pstmtStiBroker.setDouble(35, rsReplica.getDouble(35));
-	                    pstmtStiBroker.setDouble(36, rsReplica.getDouble(36));
-	                    pstmtStiBroker.setDouble(37, rsReplica.getDouble(37));	 
-	                    pstmtStiBroker.setString(38, rsReplica.getString(38));                   
-	                    timestampModifiedForTTCM_USERS = rsReplica.getTimestamp(40);
-	                    pstmtStiBroker.setTimestamp(39, timestampModifiedForTTCM_USERS);
+	                    pstmtStiBroker.setDouble(36, rsReplica.getDouble(36));	 
+	                    pstmtStiBroker.setString(37, rsReplica.getString(37));                   
+	                    timestampModifiedForTTCM_USERS = rsReplica.getTimestamp(39);
+	                    pstmtStiBroker.setTimestamp(38, timestampModifiedForTTCM_USERS);
 	                    
 	                    pstmtStiBroker.executeUpdate();
 	                    if ( pstmtStiBroker != null ) 
